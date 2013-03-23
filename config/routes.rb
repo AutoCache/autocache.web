@@ -1,5 +1,8 @@
 Autocache::Application.routes.draw do
   
+  resources :mails
+
+
   get "home/index"
 
   devise_for :users
