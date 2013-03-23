@@ -1,0 +1,37 @@
+<h1>Listing destinations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Street number</th>
+    <th>Street name</th>
+    <th>Suite</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @destinations.each do |destination| %>
+  <tr>
+    <td><%= destination.name %></td>
+    <td><%= destination.street_number %></td>
+    <td><%= destination.street_name %></td>
+    <td><%= destination.suite %></td>
+    <td><%= destination.city %></td>
+    <td><%= destination.state %></td>
+    <td><%= destination.zip %></td>
+    <td><%= destination.user_id %></td>
+    <td><%= link_to 'Show', destination %></td>
+    <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+    <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Destination', new_destination_path %>
