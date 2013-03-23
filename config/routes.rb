@@ -1,8 +1,9 @@
 Autocache::Application.routes.draw do
   
   resources :destinations
-
-
+  resources :token, :only =>[:create, :delete] do
+   post "fetch", :on => :collection
+  end
   resources :messages
 
 
