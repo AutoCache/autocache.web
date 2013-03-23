@@ -12,7 +12,7 @@ Autocache::Application.routes.draw do
 
   resources :mails
 
-
+  get "dashboard", :to => "home#dashboard"
   get "home/index"
 
   devise_for :users
