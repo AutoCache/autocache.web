@@ -1,5 +1,8 @@
 Autocache::Application.routes.draw do
   
+  resources :radios
+
+
   resources :mails
 
 

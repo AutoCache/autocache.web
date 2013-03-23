@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Preset:</b>
+  <%= @radio.preset %>
+</p>
+
+<p>
+  <b>Style:</b>
+  <%= @radio.style %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @radio.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @radio.state %>
+</p>
+
+<p>
+  <b>Frequency:</b>
+  <%= @radio.frequency %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @radio.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_radio_path(@radio) %> |
+<%= link_to 'Back', radios_path %>
